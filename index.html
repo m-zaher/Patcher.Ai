@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patcher.AI | الأداة التسويقية الاحترافية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+	<div class="logo-3d" style="direction:ltr;">
+	  <span class="patcher">Patcher</span><span class="dot">.</span><span class="ai">AI</span>
+	</div>
+      <div class="nav-links">
+        <a href="#" class="nav-link">الرئيسية</a>
+        <a href="#" class="nav-link">الميزات</a>
+        <a href="#" class="nav-link">التسعير</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="gradient-text">أداة التسويق الذكية</span>
+          <br>المدعومة بالذكاء الاصطناعي
+        </h1>
+        <p class="hero-subtitle">
+          اكتشف قوة الذكاء الاصطناعي في إنشاء محتوى تسويقي احترافي يجذب جمهورك ويزيد مبيعاتك
+        </p>
+      </div>
+      <div class="floating-elements">
+        <div class="float-element element-1"></div>
+        <div class="float-element element-2"></div>
+        <div class="float-element element-3"></div>
+      </div>
+    </section>
+
+    <!-- Input Panel -->
+    <section class="input-panel glass-card">
+      <div class="panel-header">
+        <i class="fas fa-magic"></i>
+        <h2>ابدأ بإنشاء محتواك</h2>
+      </div>
+      
+      <div class="input-group">
+        <label for="productInput">وصف المنتج أو الخدمة</label>
+        <textarea id="productInput" placeholder="اكتب وصفاً مفصلاً عن منتجك أو خدمتك هنا..."></textarea>
+      </div>
+
+      <div class="platform-selector">
+        <label>اختر المنصة</label>
+        <div class="platform-grid">
+          <div class="platform-option" data-platform="facebook">
+            <i class="fab fa-facebook-f"></i>
+            <span>فيسبوك</span>
+          </div>
+          <div class="platform-option" data-platform="instagram">
+            <i class="fab fa-instagram"></i>
+            <span>إنستجرام</span>
+          </div>
+          <div class="platform-option" data-platform="tiktok">
+            <i class="fab fa-tiktok"></i>
+            <span>تيك توك</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-primary btn-generate" onclick="generateContent()">
+        <i class="fas fa-rocket"></i>
+        <span>توليد المحتوى</span>
+      </button>
+
+      <div class="action-buttons">
+        <button class="btn-action" onclick="analyzeAudience()">
+          <i class="fas fa-users"></i>
+          <span>تحليل الجمهور</span>
+        </button>
+        <button class="btn-action" onclick="suggestTime()">
+          <i class="fas fa-clock"></i>
+          <span>اقتراح التوقيت</span>
+        </button>
+        <button class="btn-action" onclick="suggestHashtags()">
+          <i class="fas fa-hashtag"></i>
+          <span>تحليل الهاشتاجات</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Results Panel -->
+    <section id="results" class="results-panel">
+      <h2 class="section-title">
+        <i class="fas fa-chart-line"></i>
+        النتائج والتحليلات
+      </h2>
+      <div class="results-grid">
+        <div id="contentResult" class="result-card">
+          <div class="card-header">
+            <i class="fas fa-file-alt"></i>
+            <h3>المحتوى المُولد</h3>
+          </div>
+          <div class="card-content"></div>
+        </div>
+        
+        <div id="audienceResult" class="result-card">
+          <div class="card-header">
+            <i class="fas fa-target"></i>
+            <h3>تحليل الجمهور</h3>
+          </div>
+          <div class="card-content"></div>
+        </div>
+        
+        <div id="timeResult" class="result-card">
+          <div class="card-header">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>أفضل أوقات النشر</h3>
+          </div>
+          <div class="card-content"></div>
+        </div>
+        
+        <div id="hashtagsResult" class="result-card">
+          <div class="card-header">
+            <i class="fas fa-tags"></i>
+            <h3>الهاشتاجات المقترحة</h3>
+          </div>
+          <div class="card-content"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Edit Panel -->
+    <section class="edit-panel glass-card">
+      <div class="panel-header">
+        <i class="fas fa-edit"></i>
+        <h2>تعديل وتحسين المحتوى</h2>
+      </div>
+      
+      <div class="input-group">
+        <label for="revisionInput">ملاحظات التعديل</label>
+        <textarea id="revisionInput" placeholder="اكتب ملاحظاتك أو التعديلات المطلوبة هنا..."></textarea>
+      </div>
+      
+      <button class="btn-secondary" onclick="applyRevision()">
+        <i class="fas fa-paper-plane"></i>
+        <span>إرسال التعديل</span>
+      </button>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+	  <span class="patcher">Patcher</><span class="dot">.</span><span class="ai">AI</span>
+	  </div>
+      <p>© 2025 Patcher.AI. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

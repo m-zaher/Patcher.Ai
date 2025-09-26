@@ -1,0 +1,68 @@
+:root {
+  --primary: #0077cc;
+  --secondary: #ff6600;
+  --bg-light: #f0f4f8;
+  --text-dark: #1a1a1a;
+  --card-bg: #ffffff;
+  --shadow: rgba(0,0,0,0.1);
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body {
+  font-family: 'Cairo', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  direction: rtl;
+}
+.navbar {
+  background: var(--card-bg);
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px var(--shadow);
+  display: flex;
+  justify-content: center;
+}
+.container { max-width:900px; margin:30px auto; padding:0 20px; }
+.logo-3d {
+  font-size:36px; font-weight:bold; perspective:800px;
+  animation:floatLogo 3s ease-in-out infinite;
+  text-align:center; margin-bottom:20px;
+}
+.logo-3d span {
+  display:inline-block; transform-style:preserve-3d; transition:transform .3s;
+}
+.patcher { color:var(--primary); transform:rotateY(10deg); text-shadow:1px 1px 4px rgba(0,0,0,0.3);}
+.dot     { color:var(--secondary); transform:rotateY(-10deg); }
+.ai      { color:var(--text-dark); transform:rotateX(10deg); }
+@keyframes floatLogo {
+  0% {transform:translateY(0);} 50% {transform:translateY(-8px);} 100% {transform:translateY(0);}
+}
+h1 { text-align:center; margin-bottom:20px; font-weight:500; }
+.input-panel, .edit-panel {
+  background:var(--card-bg); padding:20px; border-radius:8px;
+  box-shadow:0 2px 8px var(--shadow); margin-bottom:30px;
+}
+textarea, select {
+  width:100%; padding:12px; margin-bottom:15px;
+  border:1px solid #ccc; border-radius:6px; font-size:15px;
+}
+.row { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:15px; }
+button {
+  padding:10px 18px; font-size:15px; border-radius:6px; border:none; cursor:pointer;
+  transition:background .2s;
+}
+.btn-primary { background:var(--primary); color:#fff; }
+.btn-primary:hover { background:#005fa3; }
+.btn-outline {
+  background:transparent; color:var(--primary); border:2px solid var(--primary);
+}
+.btn-outline:hover { background:var(--primary); color:#fff; }
+.btn-secondary {
+  background:var(--secondary); color:#fff; margin-top:10px;
+}
+.btn-secondary:hover { background:#cc5200; }
+.results-panel .card {
+  background:var(--card-bg); padding:15px; border-radius:6px;
+  box-shadow:0 1px 6px var(--shadow); margin-bottom:15px;
+}
+.footer {
+  text-align:center; padding:15px 0; color:#777; font-size:14px;
+}

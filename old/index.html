@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Patcher.AI | الأداة التسويقية الاحترافية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo-3d">
+      <span class="patcher">Patcher</span><span class="dot">.</span><span class="ai">AI</span>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="input-panel">
+      <h1>أداة التسويق الذكية</h1>
+      <textarea id="productInput" placeholder="اكتب وصف المنتج أو الخدمة هنا..."></textarea>
+      <div class="row">
+        <select id="platformSelect">
+          <option value="facebook">فيسبوك</option>
+          <option value="instagram">إنستجرام</option>
+          <option value="tiktok">تيك توك</option>
+        </select>
+        <button class="btn-primary" onclick="generateContent()">توليد المحتوى</button>
+      </div>
+      <div class="row">
+        <button class="btn-outline" onclick="analyzeAudience()">تحليل الجمهور</button>
+        <button class="btn-outline" onclick="suggestTime()">اقتراح توقيت</button>
+        <button class="btn-outline" onclick="suggestHashtags()">تحليل هاشتاجات</button>
+      </div>
+    </section>
+
+    <section id="results" class="results-panel">
+      <h2>النتائج</h2>
+      <div id="contentResult" class="card"></div>
+      <div id="audienceResult" class="card"></div>
+      <div id="timeResult" class="card"></div>
+      <div id="hashtagsResult" class="card"></div>
+    </section>
+
+    <section class="edit-panel">
+      <h2>تعديل المحتوى</h2>
+      <textarea id="revisionInput" placeholder="اكتب الملاحظات أو التعديلات هنا..."></textarea>
+      <button class="btn-secondary" onclick="applyRevision()">إرسال التعديل</button>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 Patcher.AI. جميع الحقوق محفوظة.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
